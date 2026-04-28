@@ -82,12 +82,12 @@
 - 테스트용 `todolist_test_db` 별도 생성
 
 **완료 조건**
-- [ ] `todolist_user` Role이 생성되어 로그인 가능하다
-- [ ] `todolist_db`가 UTF-8 인코딩으로 존재한다
-- [ ] `todolist_user`는 superuser가 아니며 최소 권한만 부여되어 있다
-- [ ] `todolist_test_db`가 별도로 생성되어 있다
-- [ ] `.env`가 `.gitignore`에 포함되고 `.env.example`만 레포에 존재한다
-- [ ] `psql -U todolist_user -d todolist_db` 접속이 성공한다
+- [x] `todolist_user` Role이 생성되어 로그인 가능하다
+- [x] `todolist_db`가 UTF-8 인코딩으로 존재한다
+- [x] `todolist_user`는 superuser가 아니며 최소 권한만 부여되어 있다
+- [x] `todolist_test_db`가 별도로 생성되어 있다
+- [x] `.env`가 `.gitignore`에 포함되고 `.env.example`만 레포에 존재한다
+- [x] `psql -U todolist_user -d todolist_db` 접속이 성공한다
 
 ---
 
@@ -102,10 +102,10 @@
 - 수동 실행 방식 채택 (Phase 1 MVP 기준)
 
 **완료 조건**
-- [ ] `backend/src/db/migrations/` 디렉토리가 존재한다
-- [ ] `20260428120000_initial_schema.sql`이 UP/DOWN 섹션을 포함하여 존재한다
-- [ ] 파일 명명 규칙이 디렉토리 내 README 또는 주석으로 기술되어 있다
-- [ ] 수동 실행 절차가 문서화되어 있다
+- [x] `backend/src/db/migrations/` 디렉토리가 존재한다
+- [x] `20260428120000_initial_schema.sql`이 UP/DOWN 섹션을 포함하여 존재한다
+- [x] 파일 명명 규칙이 디렉토리 내 README 또는 주석으로 기술되어 있다
+- [x] 수동 실행 절차가 문서화되어 있다
 
 ---
 
@@ -121,12 +121,12 @@
 - `todolist_test_db`에도 동일 스키마 적용
 
 **완료 조건**
-- [ ] `todolist_db`에 `"user"`, `category`, `todo` 테이블이 모두 존재한다
-- [ ] PK, NOT NULL, UNIQUE, FK 제약조건이 ERD 명세와 일치한다
-- [ ] CATEGORY 삭제 시 TODO의 `category_id`가 NULL로 변경된다
-- [ ] USER 삭제 시 CATEGORY, TODO가 CASCADE 삭제된다
-- [ ] `updated_at` 자동 갱신 방법이 팀 컨벤션으로 결정되어 있다
-- [ ] `todolist_test_db`에도 동일 스키마가 적용되어 있다
+- [x] `todolist_db`에 `"user"`, `category`, `todo` 테이블이 모두 존재한다
+- [x] PK, NOT NULL, UNIQUE, FK 제약조건이 ERD 명세와 일치한다
+- [x] CATEGORY 삭제 시 TODO의 `category_id`가 NULL로 변경된다
+- [x] USER 삭제 시 CATEGORY, TODO가 CASCADE 삭제된다
+- [x] `updated_at` 자동 갱신 방법이 팀 컨벤션으로 결정되어 있다 (UPDATE 쿼리에 updated_at=NOW() 명시)
+- [x] `todolist_test_db`에도 동일 스키마가 적용되어 있다
 
 ---
 
@@ -139,9 +139,9 @@
 - `EXPLAIN ANALYZE`로 대표 쿼리의 Index Scan 사용 여부 확인
 
 **완료 조건**
-- [ ] 4개 인덱스가 모두 생성되어 있다
-- [ ] `EXPLAIN ANALYZE` 결과에서 대표 쿼리가 Index Scan을 사용한다
-- [ ] 인덱스 명명 규칙이 `idx_<테이블>_<컬럼>` 패턴으로 일관된다
+- [x] 4개 인덱스가 모두 생성되어 있다
+- [x] `EXPLAIN ANALYZE` 결과에서 대표 쿼리가 Index Scan을 사용한다
+- [x] 인덱스 명명 규칙이 `idx_<테이블>_<컬럼>` 패턴으로 일관된다
 
 ---
 
@@ -157,10 +157,10 @@
 - `testConnection()` 함수 작성 및 서버 기동 시 호출
 
 **완료 조건**
-- [ ] `pool.js`가 `pg.Pool` 싱글턴을 export한다
-- [ ] 환경변수 누락 시 명확한 에러 메시지와 함께 프로세스가 종료된다
-- [ ] `pool.on('error', ...)` 핸들러가 등록되어 있다
-- [ ] `testConnection()` 실행이 성공한다
+- [x] `pool.js`가 `pg.Pool` 싱글턴을 export한다
+- [x] 환경변수 누락 시 명확한 에러 메시지와 함께 프로세스가 종료된다
+- [x] `pool.on('error', ...)` 핸들러가 등록되어 있다
+- [x] `testConnection()` 실행이 성공한다
 
 ---
 
@@ -176,10 +176,10 @@
 - Parameterized Query (`$1`, `$2`) 사용
 
 **완료 조건**
-- [ ] 3개 쿼리 파일이 존재하고 SQL 실행 함수만 포함한다
-- [ ] 모든 SELECT/UPDATE/DELETE에 `user_id` WHERE 조건이 포함되어 있다
-- [ ] 모든 쿼리가 Parameterized Query를 사용한다
-- [ ] UPDATE 함수에 `updated_at = NOW()`가 포함되어 있다
+- [x] 3개 쿼리 파일이 존재하고 SQL 실행 함수만 포함한다
+- [x] 모든 SELECT/UPDATE/DELETE에 `user_id` WHERE 조건이 포함되어 있다
+- [x] 모든 쿼리가 Parameterized Query를 사용한다
+- [x] UPDATE 함수에 `updated_at = NOW()`가 포함되어 있다
 
 ---
 
@@ -194,11 +194,11 @@
 - 미분류(`category_id = NULL`) 할일 최소 1개 포함
 
 **완료 조건**
-- [ ] `seed_dev.sql`이 3가지 상태의 대표 TODO를 포함한다
-- [ ] 비밀번호가 bcrypt hash로 저장되어 있다
-- [ ] 미분류 할일이 최소 1개 포함되어 있다
-- [ ] 시드 실행 방법이 문서화되어 있다
-- [ ] 운영 환경 실행 방지 주석이 파일 상단에 명시되어 있다
+- [x] `seed_dev.sql`이 3가지 상태의 대표 TODO를 포함한다
+- [x] 비밀번호가 bcrypt hash로 저장되어 있다
+- [x] 미분류 할일이 최소 1개 포함되어 있다
+- [x] 시드 실행 방법이 문서화되어 있다
+- [x] 운영 환경 실행 방지 주석이 파일 상단에 명시되어 있다
 
 ---
 
@@ -212,10 +212,10 @@
 - `clearDatabase()` 유틸 함수 작성 (TRUNCATE + RESTART IDENTITY CASCADE)
 
 **완료 조건**
-- [ ] `backend/.env.test`가 `todolist_test_db`를 바라보도록 설정되어 있다
-- [ ] `NODE_ENV=test` 시 테스트 DB에 연결된다
-- [ ] `clearDatabase()` 함수가 존재하고 테스트 전 데이터를 초기화한다
-- [ ] `.env.test`가 `.gitignore`에 포함되어 있다
+- [x] `backend/.env.test`가 `todolist_test_db`를 바라보도록 설정되어 있다
+- [x] `NODE_ENV=test` 시 테스트 DB에 연결된다
+- [x] `clearDatabase()` 함수가 존재하고 테스트 전 데이터를 초기화한다
+- [x] `.env.test`가 `.gitignore`에 포함되어 있다
 
 ---
 
