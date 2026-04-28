@@ -793,7 +793,8 @@
                 "title": "API 설계 및 문서화 완료하기",
                 "description": "OpenAPI 3.0 스펙 작성 및 Swagger UI 연동",
                 "categoryId": 1,
-                "dueDate": "2026-04-30T20:00:00.000Z"
+                "dueDate": "2026-04-30T20:00:00.000Z",
+                "isCompleted": true
               }
             }
           }
@@ -1213,6 +1214,11 @@
             "nullable": true,
             "description": "종료 목표 일시 (ISO 8601, UTC). null 전달 시 기한 제거",
             "example": "2026-04-30T20:00:00.000Z"
+          },
+          "isCompleted": {
+            "type": "boolean",
+            "description": "완료 여부",
+            "example": true
           }
         }
       },
