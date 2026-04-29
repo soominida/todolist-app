@@ -235,10 +235,10 @@
 - npm scripts: `start`, `dev`, `lint`, `format`, `test`
 
 **완료 조건**
-- [ ] `npm install` 후 의존성 오류가 없다
-- [ ] `npm run lint` 실행 시 설정 파일 파싱 오류가 없다
-- [ ] `.env`가 `.gitignore`에 포함되어 있다
-- [ ] `.env.example`에 필요한 환경변수 키가 모두 정의되어 있다
+- [x] `npm install` 후 의존성 오류가 없다
+- [x] `npm run lint` 실행 시 설정 파일 파싱 오류가 없다
+- [x] `.env`가 `.gitignore`에 포함되어 있다
+- [x] `.env.example`에 필요한 환경변수 키가 모두 정의되어 있다
 
 ---
 
@@ -252,9 +252,9 @@
 - `DATABASE_URL` 환경변수 미설정 시 명시적 에러 출력
 
 **완료 조건**
-- [ ] 마이그레이션 SQL 실행 시 테이블 3개 및 인덱스 4개가 생성된다
-- [ ] `pool.js` import 시 Pool 인스턴스가 단일 참조로 반환된다
-- [ ] 환경변수 미설정 시 에러 메시지가 출력된다
+- [x] 마이그레이션 SQL 실행 시 테이블 3개 및 인덱스 4개가 생성된다
+- [x] `pool.js` import 시 Pool 인스턴스가 단일 참조로 반환된다
+- [x] 환경변수 미설정 시 에러 메시지가 출력된다
 
 ---
 
@@ -268,9 +268,9 @@
 - `src/constants/index.js`: `MAX_TITLE_LENGTH`, `MAX_DESC_LENGTH`, `MAX_CATEGORY_NAME_LENGTH`, `TODO_STATUS`, `HTTP_STATUS`
 
 **완료 조건**
-- [ ] `signToken` / `verifyToken` 단위 테스트가 통과한다 (정상 발급, 만료, 잘못된 시크릿)
-- [ ] `sendSuccess` / `sendError`가 지정된 JSON 구조로 응답한다
-- [ ] 상수 파일의 모든 값이 `UPPER_SNAKE_CASE`로 선언되어 있다
+- [x] `signToken` / `verifyToken` 단위 테스트가 통과한다 (정상 발급, 만료, 잘못된 시크릿)
+- [x] `sendSuccess` / `sendError`가 지정된 JSON 구조로 응답한다
+- [x] 상수 파일의 모든 값이 `UPPER_SNAKE_CASE`로 선언되어 있다
 
 ---
 
@@ -283,9 +283,9 @@
 - `server.js`: `app.listen()`, graceful shutdown (`SIGTERM` / `SIGINT`)
 
 **완료 조건**
-- [ ] `npm run dev` 실행 시 서버가 정상 기동된다
-- [ ] `GET /api/nonexistent` 요청 시 404 JSON 응답이 반환된다
-- [ ] CORS 오리진 미설정 시 서버가 경고를 출력하거나 기동을 중단한다
+- [x] `npm run dev` 실행 시 서버가 정상 기동된다
+- [x] `GET /api/nonexistent` 요청 시 404 JSON 응답이 반환된다
+- [x] CORS 오리진 미설정 시 서버가 경고를 출력하거나 기동을 중단한다
 
 ---
 
@@ -298,10 +298,10 @@
 - `src/middlewares/errorMiddleware.js`: 4인수 에러 핸들러, `statusCode` 기반 응답, 운영 환경 스택 트레이스 미노출
 
 **완료 조건**
-- [ ] 토큰 없는 요청 → 401 응답
-- [ ] 만료된 토큰 요청 → 401 응답
-- [ ] 유효한 토큰 요청 → `req.user.id`에 사용자 ID가 주입된다
-- [ ] 서비스 레이어에서 throw된 에러가 JSON으로 응답된다
+- [x] 토큰 없는 요청 → 401 응답
+- [x] 만료된 토큰 요청 → 401 응답
+- [x] 유효한 토큰 요청 → `req.user.id`에 사용자 ID가 주입된다
+- [x] 서비스 레이어에서 throw된 에러가 JSON으로 응답된다
 
 ---
 
@@ -316,12 +316,12 @@
 - `routes/authRoutes.js`: `POST /register`, `POST /login`, `GET /me`, `POST /logout`
 
 **완료 조건**
-- [ ] `POST /api/auth/register` 성공 시 201 반환
-- [ ] 중복 이메일 가입 시 409 반환
-- [ ] `POST /api/auth/login` 성공 시 JWT 토큰 반환
-- [ ] 잘못된 비밀번호 로그인 시 401 반환
-- [ ] `GET /api/auth/me` 성공 시 사용자 이메일 반환
-- [ ] 비밀번호가 DB에 bcrypt hash로 저장된다
+- [x] `POST /api/auth/register` 성공 시 201 반환
+- [x] 중복 이메일 가입 시 409 반환
+- [x] `POST /api/auth/login` 성공 시 JWT 토큰 반환
+- [x] 잘못된 비밀번호 로그인 시 401 반환
+- [x] `GET /api/auth/me` 성공 시 사용자 이메일 반환
+- [x] 비밀번호가 DB에 bcrypt hash로 저장된다
 
 ---
 
@@ -336,11 +336,11 @@
 - `routes/categoryRoutes.js`: 전체 라우트에 `authMiddleware` 적용
 
 **완료 조건**
-- [ ] `GET /api/categories` 시 본인 카테고리 목록만 반환된다
-- [ ] 이름 20자 초과 시 400 반환
-- [ ] 동일 사용자 내 중복 이름 생성 시 409 반환
-- [ ] 타인 카테고리 수정/삭제 시 404 반환
-- [ ] 카테고리 삭제 후 소속 할일의 `category_id`가 NULL로 변경된다
+- [x] `GET /api/categories` 시 본인 카테고리 목록만 반환된다
+- [x] 이름 20자 초과 시 400 반환
+- [x] 동일 사용자 내 중복 이름 생성 시 409 반환
+- [x] 타인 카테고리 수정/삭제 시 404 반환
+- [x] 카테고리 삭제 후 소속 할일의 `category_id`가 NULL로 변경된다
 
 ---
 
@@ -355,15 +355,15 @@
 - `routes/todoRoutes.js`: `GET /`, `POST /`, `PUT /:id`, `PATCH /:id/complete`, `DELETE /:id`
 
 **완료 조건**
-- [ ] `GET /api/todos` 시 본인 할일 목록만 반환된다
-- [ ] `?status=overdue` 필터가 `is_completed=false AND due_date < NOW()` 조건으로 동작한다
-- [ ] `?status=pending`, `?status=completed` 필터가 정상 동작한다
-- [ ] `?categoryId=1` 필터가 정상 동작한다
-- [ ] 두 필터 동시 적용이 정상 동작한다
-- [ ] `POST /api/todos` title 100자 초과 시 400 반환
-- [ ] `DELETE /api/todos/:id` 시 204 반환 및 DB에서 영구 삭제된다
-- [ ] 타인 할일 수정/삭제 시 404 반환
-- [ ] 모든 쿼리가 Parameterized Query로 SQL Injection을 방지한다
+- [x] `GET /api/todos` 시 본인 할일 목록만 반환된다
+- [x] `?status=overdue` 필터가 `is_completed=false AND due_date < NOW()` 조건으로 동작한다
+- [x] `?status=pending`, `?status=completed` 필터가 정상 동작한다
+- [x] `?categoryId=1` 필터가 정상 동작한다
+- [x] 두 필터 동시 적용이 정상 동작한다
+- [x] `POST /api/todos` title 100자 초과 시 400 반환
+- [x] `DELETE /api/todos/:id` 시 204 반환 및 DB에서 영구 삭제된다
+- [x] 타인 할일 수정/삭제 시 404 반환
+- [x] 모든 쿼리가 Parameterized Query로 SQL Injection을 방지한다
 
 ---
 
@@ -378,10 +378,10 @@
 - DB 쿼리 함수는 mock으로 대체 (실제 DB 불필요)
 
 **완료 조건**
-- [ ] `npm test` 실행 시 모든 테스트가 통과한다
-- [ ] 서비스 레이어 코드 커버리지 70% 이상을 달성한다
-- [ ] 테스트가 실제 DB 또는 네트워크에 의존하지 않는다
-- [ ] 각 에러 케이스에서 올바른 HTTP 상태 코드에 해당하는 에러가 throw된다
+- [x] `npm test` 실행 시 모든 테스트가 통과한다
+- [x] 서비스 레이어 코드 커버리지 70% 이상을 달성한다
+- [x] 테스트가 실제 DB 또는 네트워크에 의존하지 않는다
+- [x] 각 에러 케이스에서 올바른 HTTP 상태 코드에 해당하는 에러가 throw된다
 
 ---
 

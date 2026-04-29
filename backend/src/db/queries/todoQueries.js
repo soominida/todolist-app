@@ -6,8 +6,12 @@ export async function findTodosByUserId(userId, filters = {}) {
   const conditions = ['user_id = $1'];
 
   if (categoryId !== undefined) {
-    params.push(categoryId);
-    conditions.push(`category_id = $${params.length}`);
+    if (categoryId === '0' || categoryId === 0 || categoryId === 'null') {
+      conditions.push('category_id IS NULL');
+    } else {
+      params.push(categoryId);
+      conditions.push(`category_id = $${params.length}`);
+    }
   }
 
   if (status === 'completed') {

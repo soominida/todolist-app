@@ -182,18 +182,6 @@
               }
             }
           },
-          "400": {
-            "description": "입력값 누락 (이메일 또는 비밀번호 미입력)",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/components/schemas/ErrorResponse" },
-                "example": {
-                  "success": false,
-                  "message": "이메일과 비밀번호를 입력해주세요."
-                }
-              }
-            }
-          },
           "401": {
             "description": "이메일 또는 비밀번호 불일치",
             "content": {
@@ -522,9 +510,6 @@
           "401": {
             "$ref": "#/components/responses/Unauthorized"
           },
-          "403": {
-            "$ref": "#/components/responses/Forbidden"
-          },
           "404": {
             "$ref": "#/components/responses/CategoryNotFound"
           },
@@ -562,9 +547,6 @@
           },
           "401": {
             "$ref": "#/components/responses/Unauthorized"
-          },
-          "403": {
-            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
             "$ref": "#/components/responses/CategoryNotFound"
@@ -749,20 +731,20 @@
               }
             }
           },
-          "401": {
-            "$ref": "#/components/responses/Unauthorized"
-          },
-          "404": {
+          "400": {
             "description": "지정한 categoryId에 해당하는 카테고리가 존재하지 않거나 본인 소유가 아님",
             "content": {
               "application/json": {
                 "schema": { "$ref": "#/components/schemas/ErrorResponse" },
                 "example": {
                   "success": false,
-                  "message": "존재하지 않는 카테고리입니다."
+                  "message": "존재하지 않거나 접근할 수 없는 카테고리입니다."
                 }
               }
             }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
@@ -857,9 +839,6 @@
           "401": {
             "$ref": "#/components/responses/Unauthorized"
           },
-          "403": {
-            "$ref": "#/components/responses/Forbidden"
-          },
           "404": {
             "$ref": "#/components/responses/TodoNotFound"
           },
@@ -885,9 +864,6 @@
           },
           "401": {
             "$ref": "#/components/responses/Unauthorized"
-          },
-          "403": {
-            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
             "$ref": "#/components/responses/TodoNotFound"
@@ -955,9 +931,6 @@
           },
           "401": {
             "$ref": "#/components/responses/Unauthorized"
-          },
-          "403": {
-            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
             "$ref": "#/components/responses/TodoNotFound"
