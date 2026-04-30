@@ -1,0 +1,113 @@
+{
+  "app": {
+    "title": "할일 관리"
+  },
+  "header": {
+    "categoryManage": "카테고리 관리",
+    "logout": "로그아웃",
+    "darkMode": "다크모드로 전환",
+    "lightMode": "라이트모드로 전환"
+  },
+  "filter": {
+    "allCategories": "전체 카테고리",
+    "uncategorized": "미분류",
+    "all": "전체",
+    "pending": "미완료",
+    "completed": "완료",
+    "overdue": "기한초과",
+    "sortCreatedDesc": "등록일 최신순",
+    "sortCreatedAsc": "등록일 오래된순",
+    "sortDueDateAsc": "종료일 빠른순",
+    "sortDueDateDesc": "종료일 늦은순"
+  },
+  "todo": {
+    "addButton": "+ 할일 추가",
+    "category": "카테고리",
+    "dueDate": "종료일",
+    "noDueDate": "종료일 없음",
+    "uncategorized": "미분류",
+    "editLabel": "수정",
+    "deleteLabel": "삭제",
+    "completeLabel": "완료 처리",
+    "uncompleteLabel": "완료 취소",
+    "loading": "로딩 중...",
+    "loadError": "할일을 불러오는 데 실패했습니다.",
+    "empty": "할일이 없습니다."
+  },
+  "todoForm": {
+    "addTitle": "할일 추가",
+    "editTitle": "할일 수정",
+    "titleLabel": "제목 *",
+    "titlePlaceholder": "제목을 입력하세요",
+    "titleRequired": "제목은 필수 항목입니다",
+    "titleMaxLength": "제목은 최대 100자입니다",
+    "descLabel": "설명",
+    "descPlaceholder": "설명을 입력하세요 (선택)",
+    "descMaxLength": "설명은 최대 500자입니다",
+    "categoryLabel": "카테고리",
+    "uncategorized": "미분류",
+    "addCategory": "+ 새 카테고리 추가...",
+    "newCategoryPlaceholder": "새 카테고리 이름 (최대 20자)",
+    "addCategoryButton": "추가",
+    "dueDateLabel": "종료일",
+    "save": "저장",
+    "cancel": "취소"
+  },
+  "todoDelete": {
+    "title": "삭제 확인",
+    "message": "이 할일을 영구 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.",
+    "confirm": "삭제",
+    "cancel": "취소"
+  },
+  "category": {
+    "pageTitle": "카테고리 관리",
+    "backToTodo": "← 할일 목록",
+    "addSection": "새 카테고리 추가",
+    "namePlaceholder": "카테고리 이름 (최대 20자)",
+    "addButton": "+ 카테고리 추가",
+    "listTitle": "내 카테고리 목록",
+    "edit": "수정",
+    "delete": "삭제",
+    "save": "저장",
+    "cancel": "취소",
+    "empty": "카테고리가 없습니다. 위 입력란으로 추가해보세요.",
+    "nameRequired": "카테고리 이름을 입력해 주세요.",
+    "nameMaxLength": "카테고리 이름은 20자 이하여야 합니다.",
+    "deleteTitle": "삭제 확인",
+    "deleteMessage": "삭제 시 해당 카테고리의 할일은 미분류로 이동됩니다. 삭제하시겠습니까?",
+    "deleteConfirm": "삭제",
+    "deleteCancel": "취소"
+  },
+  "auth": {
+    "loginTitle": "할일 관리",
+    "loginHeading": "로그인",
+    "emailLabel": "이메일",
+    "emailPlaceholder": "example@email.com",
+    "emailError": "올바른 이메일 형식을 입력해 주세요.",
+    "passwordLabel": "비밀번호",
+    "passwordPlaceholder": "비밀번호",
+    "showPassword": "보기",
+    "hidePassword": "숨기기",
+    "passwordRequired": "비밀번호를 입력해 주세요.",
+    "loginButton": "로그인",
+    "noAccount": "계정이 없으신가요?",
+    "register": "회원가입",
+    "registerHeading": "회원가입",
+    "passwordHint": "영문+숫자 조합 8자 이상",
+    "passwordError": "영문+숫자 조합 8자 이상으로 입력해 주세요.",
+    "confirmPasswordLabel": "비밀번호 확인",
+    "confirmPasswordPlaceholder": "비밀번호 확인",
+    "confirmPasswordError": "비밀번호가 일치하지 않습니다.",
+    "registerButton": "가입",
+    "hasAccount": "이미 계정이 있으신가요?",
+    "login": "로그인",
+    "registerSuccess": "회원가입이 완료되었습니다.",
+    "registerSuccessDesc": "이제 로그인하여 서비스를 이용하실 수 있습니다.",
+    "goToLogin": "로그인하러 가기"
+  },
+  "language": {
+    "ko": "한국어",
+    "en": "English",
+    "ja": "日本語"
+  }
+}
